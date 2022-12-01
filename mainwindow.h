@@ -4,6 +4,7 @@
 #include "setting.h"
 #include <QMainWindow>
 #include <QPushButton>
+#include <QStackedWidget>
 
 namespace Ui {
 class MainWindow;
@@ -15,6 +16,8 @@ class MainWindow : public QMainWindow
 
 public Q_SLOTS:
     void settingButtonClicked();
+    void qsdButtonClicked();
+    void finishButtonClicked();
 
 public:
     explicit MainWindow(QWidget *parent = 0);
@@ -23,8 +26,10 @@ public:
 private:
     Ui::MainWindow *ui;
     QPushButton *settingPushButton;
+    QPushButton *qsdPushButton;
+    QPushButton *finishPushButton;
     Setting *settingUi;
-
+    QStackedWidget *stackedWidget;
 };
 
 #endif // MAINWINDOW_H

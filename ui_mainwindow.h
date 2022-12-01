@@ -22,6 +22,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
+#include <QtWidgets/QStackedWidget>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
@@ -33,7 +34,7 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralWidget;
-    QVBoxLayout *verticalLayout_20;
+    QVBoxLayout *verticalLayout_22;
     QHBoxLayout *horizontalLayout_2;
     QVBoxLayout *verticalLayout;
     QLabel *label_3;
@@ -53,6 +54,9 @@ public:
     QHBoxLayout *horizontalLayout_4;
     QPushButton *pushButton_2;
     QLabel *label_6;
+    QStackedWidget *stackedWidget;
+    QWidget *page;
+    QVBoxLayout *verticalLayout_23;
     QHBoxLayout *horizontalLayout_5;
     QVBoxLayout *verticalLayout_9;
     QLabel *label_17;
@@ -152,10 +156,29 @@ public:
     QLabel *label_32;
     QHBoxLayout *horizontalLayout_18;
     QSpacerItem *verticalSpacer_7;
-    QPushButton *pushButton_16;
+    QPushButton *qsdPushButton;
     QVBoxLayout *verticalLayout_19;
     QPushButton *settingPushButton;
     QPushButton *pushButton_18;
+    QWidget *page_2;
+    QHBoxLayout *horizontalLayout_24;
+    QVBoxLayout *verticalLayout_20;
+    QHBoxLayout *horizontalLayout_23;
+    QLineEdit *lineEdit_20;
+    QLineEdit *lineEdit_21;
+    QHBoxLayout *horizontalLayout_21;
+    QHBoxLayout *horizontalLayout_19;
+    QPushButton *pushButton_13;
+    QSpacerItem *horizontalSpacer_13;
+    QPushButton *pushButton_17;
+    QSpacerItem *horizontalSpacer_14;
+    QPushButton *pushButton_19;
+    QSpacerItem *horizontalSpacer_15;
+    QPushButton *pushButton_20;
+    QSpacerItem *horizontalSpacer_16;
+    QHBoxLayout *horizontalLayout_20;
+    QPushButton *pushButton_4;
+    QPushButton *finishPushButton;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -164,14 +187,14 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(1569, 924);
+        MainWindow->resize(1605, 945);
         MainWindow->setStyleSheet(QStringLiteral("background-color : black;"));
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
-        verticalLayout_20 = new QVBoxLayout(centralWidget);
-        verticalLayout_20->setSpacing(6);
-        verticalLayout_20->setContentsMargins(11, 11, 11, 11);
-        verticalLayout_20->setObjectName(QStringLiteral("verticalLayout_20"));
+        verticalLayout_22 = new QVBoxLayout(centralWidget);
+        verticalLayout_22->setSpacing(6);
+        verticalLayout_22->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_22->setObjectName(QStringLiteral("verticalLayout_22"));
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(6);
         horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
@@ -325,15 +348,24 @@ public:
         horizontalLayout_2->addLayout(verticalLayout_2);
 
 
-        verticalLayout_20->addLayout(horizontalLayout_2);
+        verticalLayout_22->addLayout(horizontalLayout_2);
 
+        stackedWidget = new QStackedWidget(centralWidget);
+        stackedWidget->setObjectName(QStringLiteral("stackedWidget"));
+        stackedWidget->setStyleSheet(QStringLiteral(""));
+        page = new QWidget();
+        page->setObjectName(QStringLiteral("page"));
+        verticalLayout_23 = new QVBoxLayout(page);
+        verticalLayout_23->setSpacing(6);
+        verticalLayout_23->setContentsMargins(11, 11, 11, 11);
+        verticalLayout_23->setObjectName(QStringLiteral("verticalLayout_23"));
         horizontalLayout_5 = new QHBoxLayout();
         horizontalLayout_5->setSpacing(6);
         horizontalLayout_5->setObjectName(QStringLiteral("horizontalLayout_5"));
         verticalLayout_9 = new QVBoxLayout();
         verticalLayout_9->setSpacing(6);
         verticalLayout_9->setObjectName(QStringLiteral("verticalLayout_9"));
-        label_17 = new QLabel(centralWidget);
+        label_17 = new QLabel(page);
         label_17->setObjectName(QStringLiteral("label_17"));
         QSizePolicy sizePolicy(QSizePolicy::MinimumExpanding, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
@@ -346,7 +378,7 @@ public:
 
         verticalLayout_9->addWidget(label_17);
 
-        lineEdit_9 = new QLineEdit(centralWidget);
+        lineEdit_9 = new QLineEdit(page);
         lineEdit_9->setObjectName(QStringLiteral("lineEdit_9"));
         QSizePolicy sizePolicy1(QSizePolicy::MinimumExpanding, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
@@ -363,7 +395,7 @@ public:
 
         verticalLayout_9->addWidget(lineEdit_9);
 
-        label_18 = new QLabel(centralWidget);
+        label_18 = new QLabel(page);
         label_18->setObjectName(QStringLiteral("label_18"));
         sizePolicy.setHeightForWidth(label_18->sizePolicy().hasHeightForWidth());
         label_18->setSizePolicy(sizePolicy);
@@ -373,7 +405,7 @@ public:
 
         verticalLayout_9->addWidget(label_18);
 
-        lineEdit_10 = new QLineEdit(centralWidget);
+        lineEdit_10 = new QLineEdit(page);
         lineEdit_10->setObjectName(QStringLiteral("lineEdit_10"));
         sizePolicy1.setHeightForWidth(lineEdit_10->sizePolicy().hasHeightForWidth());
         lineEdit_10->setSizePolicy(sizePolicy1);
@@ -396,7 +428,7 @@ public:
         verticalLayout_3 = new QVBoxLayout();
         verticalLayout_3->setSpacing(6);
         verticalLayout_3->setObjectName(QStringLiteral("verticalLayout_3"));
-        label_8 = new QLabel(centralWidget);
+        label_8 = new QLabel(page);
         label_8->setObjectName(QStringLiteral("label_8"));
         label_8->setFont(font3);
         label_8->setStyleSheet(QStringLiteral("color:white"));
@@ -404,7 +436,7 @@ public:
 
         verticalLayout_3->addWidget(label_8);
 
-        lineEdit = new QLineEdit(centralWidget);
+        lineEdit = new QLineEdit(page);
         lineEdit->setObjectName(QStringLiteral("lineEdit"));
         lineEdit->setFont(font);
         lineEdit->setStyleSheet(QLatin1String("background-color:transparent;\n"
@@ -416,7 +448,7 @@ public:
 
         verticalLayout_3->addWidget(lineEdit);
 
-        label_10 = new QLabel(centralWidget);
+        label_10 = new QLabel(page);
         label_10->setObjectName(QStringLiteral("label_10"));
         label_10->setFont(font3);
         label_10->setStyleSheet(QStringLiteral("color:white"));
@@ -424,7 +456,7 @@ public:
 
         verticalLayout_3->addWidget(label_10);
 
-        lineEdit_2 = new QLineEdit(centralWidget);
+        lineEdit_2 = new QLineEdit(page);
         lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
         lineEdit_2->setFont(font);
         lineEdit_2->setStyleSheet(QLatin1String("background-color:transparent;\n"
@@ -442,7 +474,7 @@ public:
         verticalLayout_6 = new QVBoxLayout();
         verticalLayout_6->setSpacing(6);
         verticalLayout_6->setObjectName(QStringLiteral("verticalLayout_6"));
-        label_11 = new QLabel(centralWidget);
+        label_11 = new QLabel(page);
         label_11->setObjectName(QStringLiteral("label_11"));
         label_11->setFont(font3);
         label_11->setStyleSheet(QStringLiteral("color:white"));
@@ -450,7 +482,7 @@ public:
 
         verticalLayout_6->addWidget(label_11);
 
-        lineEdit_3 = new QLineEdit(centralWidget);
+        lineEdit_3 = new QLineEdit(page);
         lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
         lineEdit_3->setFont(font);
         lineEdit_3->setStyleSheet(QLatin1String("background-color:transparent;\n"
@@ -462,7 +494,7 @@ public:
 
         verticalLayout_6->addWidget(lineEdit_3);
 
-        label_12 = new QLabel(centralWidget);
+        label_12 = new QLabel(page);
         label_12->setObjectName(QStringLiteral("label_12"));
         label_12->setFont(font3);
         label_12->setStyleSheet(QStringLiteral("color:white"));
@@ -470,7 +502,7 @@ public:
 
         verticalLayout_6->addWidget(label_12);
 
-        lineEdit_4 = new QLineEdit(centralWidget);
+        lineEdit_4 = new QLineEdit(page);
         lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
         lineEdit_4->setFont(font);
         lineEdit_4->setStyleSheet(QLatin1String("background-color:transparent;\n"
@@ -488,7 +520,7 @@ public:
         verticalLayout_7 = new QVBoxLayout();
         verticalLayout_7->setSpacing(6);
         verticalLayout_7->setObjectName(QStringLiteral("verticalLayout_7"));
-        label_13 = new QLabel(centralWidget);
+        label_13 = new QLabel(page);
         label_13->setObjectName(QStringLiteral("label_13"));
         label_13->setFont(font3);
         label_13->setStyleSheet(QStringLiteral("color:white"));
@@ -496,7 +528,7 @@ public:
 
         verticalLayout_7->addWidget(label_13);
 
-        lineEdit_5 = new QLineEdit(centralWidget);
+        lineEdit_5 = new QLineEdit(page);
         lineEdit_5->setObjectName(QStringLiteral("lineEdit_5"));
         lineEdit_5->setFont(font);
         lineEdit_5->setStyleSheet(QLatin1String("background-color:transparent;\n"
@@ -508,7 +540,7 @@ public:
 
         verticalLayout_7->addWidget(lineEdit_5);
 
-        label_14 = new QLabel(centralWidget);
+        label_14 = new QLabel(page);
         label_14->setObjectName(QStringLiteral("label_14"));
         label_14->setFont(font3);
         label_14->setStyleSheet(QStringLiteral("color:white"));
@@ -516,7 +548,7 @@ public:
 
         verticalLayout_7->addWidget(label_14);
 
-        lineEdit_6 = new QLineEdit(centralWidget);
+        lineEdit_6 = new QLineEdit(page);
         lineEdit_6->setObjectName(QStringLiteral("lineEdit_6"));
         lineEdit_6->setFont(font);
         lineEdit_6->setStyleSheet(QLatin1String("background-color:transparent;\n"
@@ -534,7 +566,7 @@ public:
         verticalLayout_8 = new QVBoxLayout();
         verticalLayout_8->setSpacing(6);
         verticalLayout_8->setObjectName(QStringLiteral("verticalLayout_8"));
-        label_15 = new QLabel(centralWidget);
+        label_15 = new QLabel(page);
         label_15->setObjectName(QStringLiteral("label_15"));
         label_15->setFont(font3);
         label_15->setStyleSheet(QStringLiteral("color:white"));
@@ -542,7 +574,7 @@ public:
 
         verticalLayout_8->addWidget(label_15);
 
-        lineEdit_7 = new QLineEdit(centralWidget);
+        lineEdit_7 = new QLineEdit(page);
         lineEdit_7->setObjectName(QStringLiteral("lineEdit_7"));
         lineEdit_7->setFont(font);
         lineEdit_7->setStyleSheet(QLatin1String("background-color:transparent;\n"
@@ -554,7 +586,7 @@ public:
 
         verticalLayout_8->addWidget(lineEdit_7);
 
-        label_16 = new QLabel(centralWidget);
+        label_16 = new QLabel(page);
         label_16->setObjectName(QStringLiteral("label_16"));
         label_16->setFont(font3);
         label_16->setStyleSheet(QStringLiteral("color:white"));
@@ -562,7 +594,7 @@ public:
 
         verticalLayout_8->addWidget(label_16);
 
-        lineEdit_8 = new QLineEdit(centralWidget);
+        lineEdit_8 = new QLineEdit(page);
         lineEdit_8->setObjectName(QStringLiteral("lineEdit_8"));
         lineEdit_8->setFont(font);
         lineEdit_8->setStyleSheet(QLatin1String("background-color:transparent;\n"
@@ -581,7 +613,7 @@ public:
         horizontalLayout_5->addLayout(horizontalLayout_6);
 
 
-        verticalLayout_20->addLayout(horizontalLayout_5);
+        verticalLayout_23->addLayout(horizontalLayout_5);
 
         horizontalLayout_8 = new QHBoxLayout();
         horizontalLayout_8->setSpacing(6);
@@ -589,7 +621,7 @@ public:
         verticalLayout_11 = new QVBoxLayout();
         verticalLayout_11->setSpacing(6);
         verticalLayout_11->setObjectName(QStringLiteral("verticalLayout_11"));
-        label_19 = new QLabel(centralWidget);
+        label_19 = new QLabel(page);
         label_19->setObjectName(QStringLiteral("label_19"));
         QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Maximum);
         sizePolicy2.setHorizontalStretch(0);
@@ -602,7 +634,7 @@ public:
 
         verticalLayout_11->addWidget(label_19);
 
-        lineEdit_11 = new QLineEdit(centralWidget);
+        lineEdit_11 = new QLineEdit(page);
         lineEdit_11->setObjectName(QStringLiteral("lineEdit_11"));
         QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy3.setHorizontalStretch(0);
@@ -625,7 +657,7 @@ public:
         verticalLayout_12 = new QVBoxLayout();
         verticalLayout_12->setSpacing(6);
         verticalLayout_12->setObjectName(QStringLiteral("verticalLayout_12"));
-        label_20 = new QLabel(centralWidget);
+        label_20 = new QLabel(page);
         label_20->setObjectName(QStringLiteral("label_20"));
         sizePolicy2.setHeightForWidth(label_20->sizePolicy().hasHeightForWidth());
         label_20->setSizePolicy(sizePolicy2);
@@ -635,7 +667,7 @@ public:
 
         verticalLayout_12->addWidget(label_20);
 
-        lineEdit_12 = new QLineEdit(centralWidget);
+        lineEdit_12 = new QLineEdit(page);
         lineEdit_12->setObjectName(QStringLiteral("lineEdit_12"));
         QSizePolicy sizePolicy4(QSizePolicy::Minimum, QSizePolicy::MinimumExpanding);
         sizePolicy4.setHorizontalStretch(0);
@@ -652,7 +684,7 @@ public:
 
         verticalLayout_12->addWidget(lineEdit_12);
 
-        horizontalGroupBox_7 = new QGroupBox(centralWidget);
+        horizontalGroupBox_7 = new QGroupBox(page);
         horizontalGroupBox_7->setObjectName(QStringLiteral("horizontalGroupBox_7"));
         horizontalGroupBox_7->setStyleSheet(QLatin1String("QGroupBox{\n"
 " border-style: solid;\n"
@@ -706,7 +738,7 @@ public:
         verticalLayout_14 = new QVBoxLayout();
         verticalLayout_14->setSpacing(6);
         verticalLayout_14->setObjectName(QStringLiteral("verticalLayout_14"));
-        label_24 = new QLabel(centralWidget);
+        label_24 = new QLabel(page);
         label_24->setObjectName(QStringLiteral("label_24"));
         QSizePolicy sizePolicy6(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy6.setHorizontalStretch(0);
@@ -719,7 +751,7 @@ public:
 
         verticalLayout_14->addWidget(label_24);
 
-        lineEdit_14 = new QLineEdit(centralWidget);
+        lineEdit_14 = new QLineEdit(page);
         lineEdit_14->setObjectName(QStringLiteral("lineEdit_14"));
         QSizePolicy sizePolicy7(QSizePolicy::Maximum, QSizePolicy::Fixed);
         sizePolicy7.setHorizontalStretch(0);
@@ -736,7 +768,7 @@ public:
 
         verticalLayout_14->addWidget(lineEdit_14);
 
-        label_25 = new QLabel(centralWidget);
+        label_25 = new QLabel(page);
         label_25->setObjectName(QStringLiteral("label_25"));
         sizePolicy6.setHeightForWidth(label_25->sizePolicy().hasHeightForWidth());
         label_25->setSizePolicy(sizePolicy6);
@@ -746,7 +778,7 @@ public:
 
         verticalLayout_14->addWidget(label_25);
 
-        lineEdit_15 = new QLineEdit(centralWidget);
+        lineEdit_15 = new QLineEdit(page);
         lineEdit_15->setObjectName(QStringLiteral("lineEdit_15"));
         sizePolicy7.setHeightForWidth(lineEdit_15->sizePolicy().hasHeightForWidth());
         lineEdit_15->setSizePolicy(sizePolicy7);
@@ -760,7 +792,7 @@ public:
 
         verticalLayout_14->addWidget(lineEdit_15);
 
-        label_26 = new QLabel(centralWidget);
+        label_26 = new QLabel(page);
         label_26->setObjectName(QStringLiteral("label_26"));
         sizePolicy6.setHeightForWidth(label_26->sizePolicy().hasHeightForWidth());
         label_26->setSizePolicy(sizePolicy6);
@@ -770,7 +802,7 @@ public:
 
         verticalLayout_14->addWidget(label_26);
 
-        lineEdit_16 = new QLineEdit(centralWidget);
+        lineEdit_16 = new QLineEdit(page);
         lineEdit_16->setObjectName(QStringLiteral("lineEdit_16"));
         sizePolicy7.setHeightForWidth(lineEdit_16->sizePolicy().hasHeightForWidth());
         lineEdit_16->setSizePolicy(sizePolicy7);
@@ -788,12 +820,12 @@ public:
         horizontalLayout_8->addLayout(verticalLayout_14);
 
 
-        verticalLayout_20->addLayout(horizontalLayout_8);
+        verticalLayout_23->addLayout(horizontalLayout_8);
 
         horizontalLayout_10 = new QHBoxLayout();
         horizontalLayout_10->setSpacing(6);
         horizontalLayout_10->setObjectName(QStringLiteral("horizontalLayout_10"));
-        horizontalGroupBox_71 = new QGroupBox(centralWidget);
+        horizontalGroupBox_71 = new QGroupBox(page);
         horizontalGroupBox_71->setObjectName(QStringLiteral("horizontalGroupBox_71"));
         horizontalGroupBox_71->setStyleSheet(QLatin1String("QGroupBox{\n"
 " border-style: solid;\n"
@@ -838,7 +870,7 @@ public:
 
         horizontalLayout_10->addWidget(horizontalGroupBox_71);
 
-        lineEdit_17 = new QLineEdit(centralWidget);
+        lineEdit_17 = new QLineEdit(page);
         lineEdit_17->setObjectName(QStringLiteral("lineEdit_17"));
         sizePolicy8.setHeightForWidth(lineEdit_17->sizePolicy().hasHeightForWidth());
         lineEdit_17->setSizePolicy(sizePolicy8);
@@ -853,9 +885,9 @@ public:
         horizontalLayout_10->addWidget(lineEdit_17);
 
 
-        verticalLayout_20->addLayout(horizontalLayout_10);
+        verticalLayout_23->addLayout(horizontalLayout_10);
 
-        horizontalGroupBox_3 = new QGroupBox(centralWidget);
+        horizontalGroupBox_3 = new QGroupBox(page);
         horizontalGroupBox_3->setObjectName(QStringLiteral("horizontalGroupBox_3"));
         horizontalGroupBox_3->setStyleSheet(QLatin1String("QGroupBox{\n"
 " border-style: solid;\n"
@@ -1329,10 +1361,10 @@ public:
 
         verticalLayout_18->addItem(verticalSpacer_7);
 
-        pushButton_16 = new QPushButton(horizontalGroupBox_3);
-        pushButton_16->setObjectName(QStringLiteral("pushButton_16"));
-        pushButton_16->setFont(font6);
-        pushButton_16->setStyleSheet(QLatin1String("QPushButton{\n"
+        qsdPushButton = new QPushButton(horizontalGroupBox_3);
+        qsdPushButton->setObjectName(QStringLiteral("qsdPushButton"));
+        qsdPushButton->setFont(font6);
+        qsdPushButton->setStyleSheet(QLatin1String("QPushButton{\n"
 "border-width:0px;\n"
 "border-style : solid;\n"
 "background-color:transparent;\n"
@@ -1350,7 +1382,7 @@ public:
 "}\n"
 ""));
 
-        verticalLayout_18->addWidget(pushButton_16);
+        verticalLayout_18->addWidget(qsdPushButton);
 
 
         horizontalLayout_16->addLayout(verticalLayout_18);
@@ -1411,12 +1443,238 @@ public:
         horizontalLayout_14->addLayout(horizontalLayout_16);
 
 
-        verticalLayout_20->addWidget(horizontalGroupBox_3);
+        verticalLayout_23->addWidget(horizontalGroupBox_3);
+
+        stackedWidget->addWidget(page);
+        page_2 = new QWidget();
+        page_2->setObjectName(QStringLiteral("page_2"));
+        horizontalLayout_24 = new QHBoxLayout(page_2);
+        horizontalLayout_24->setSpacing(6);
+        horizontalLayout_24->setContentsMargins(11, 11, 11, 11);
+        horizontalLayout_24->setObjectName(QStringLiteral("horizontalLayout_24"));
+        verticalLayout_20 = new QVBoxLayout();
+        verticalLayout_20->setSpacing(6);
+        verticalLayout_20->setObjectName(QStringLiteral("verticalLayout_20"));
+        horizontalLayout_23 = new QHBoxLayout();
+        horizontalLayout_23->setSpacing(6);
+        horizontalLayout_23->setObjectName(QStringLiteral("horizontalLayout_23"));
+        lineEdit_20 = new QLineEdit(page_2);
+        lineEdit_20->setObjectName(QStringLiteral("lineEdit_20"));
+        sizePolicy4.setHeightForWidth(lineEdit_20->sizePolicy().hasHeightForWidth());
+        lineEdit_20->setSizePolicy(sizePolicy4);
+        QFont font8;
+        font8.setFamily(QStringLiteral("Segoe UI Variable Display"));
+        font8.setPointSize(72);
+        font8.setBold(true);
+        font8.setWeight(75);
+        lineEdit_20->setFont(font8);
+        lineEdit_20->setStyleSheet(QLatin1String("background-color:transparent;\n"
+" border-style: solid;\n"
+" border-color: rgb(220,220,220);\n"
+"border-width:2px;\n"
+"color : #90ee90;"));
+        lineEdit_20->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_23->addWidget(lineEdit_20);
+
+        lineEdit_21 = new QLineEdit(page_2);
+        lineEdit_21->setObjectName(QStringLiteral("lineEdit_21"));
+        sizePolicy4.setHeightForWidth(lineEdit_21->sizePolicy().hasHeightForWidth());
+        lineEdit_21->setSizePolicy(sizePolicy4);
+        lineEdit_21->setFont(font8);
+        lineEdit_21->setStyleSheet(QLatin1String("background-color:transparent;\n"
+" border-style: solid;\n"
+" border-color: rgb(220,220,220);\n"
+"border-width:2px;\n"
+"color : #90ee90;"));
+        lineEdit_21->setAlignment(Qt::AlignCenter);
+
+        horizontalLayout_23->addWidget(lineEdit_21);
+
+
+        verticalLayout_20->addLayout(horizontalLayout_23);
+
+        horizontalLayout_21 = new QHBoxLayout();
+        horizontalLayout_21->setSpacing(6);
+        horizontalLayout_21->setObjectName(QStringLiteral("horizontalLayout_21"));
+        horizontalLayout_19 = new QHBoxLayout();
+        horizontalLayout_19->setSpacing(6);
+        horizontalLayout_19->setObjectName(QStringLiteral("horizontalLayout_19"));
+        pushButton_13 = new QPushButton(page_2);
+        pushButton_13->setObjectName(QStringLiteral("pushButton_13"));
+        QFont font9;
+        font9.setFamily(QStringLiteral("Icon-Works"));
+        font9.setPointSize(36);
+        font9.setBold(true);
+        font9.setItalic(false);
+        font9.setWeight(75);
+        pushButton_13->setFont(font9);
+        pushButton_13->setStyleSheet(QLatin1String("QPushButton{\n"
+"border-width:0px;\n"
+"border-style : solid;\n"
+"background-color:transparent;\n"
+"color: rgb(220,220,220);\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color: #87CEEB;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"color : #7CFC00;\n"
+"}\n"
+""));
+
+        horizontalLayout_19->addWidget(pushButton_13);
+
+        horizontalSpacer_13 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_19->addItem(horizontalSpacer_13);
+
+        pushButton_17 = new QPushButton(page_2);
+        pushButton_17->setObjectName(QStringLiteral("pushButton_17"));
+        pushButton_17->setFont(font9);
+        pushButton_17->setStyleSheet(QLatin1String("QPushButton{\n"
+"border-width:0px;\n"
+"border-style : solid;\n"
+"background-color:transparent;\n"
+"color: rgb(220,220,220);\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color: #87CEEB;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"color : #7CFC00;\n"
+"}\n"
+""));
+
+        horizontalLayout_19->addWidget(pushButton_17);
+
+        horizontalSpacer_14 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_19->addItem(horizontalSpacer_14);
+
+        pushButton_19 = new QPushButton(page_2);
+        pushButton_19->setObjectName(QStringLiteral("pushButton_19"));
+        pushButton_19->setFont(font9);
+        pushButton_19->setStyleSheet(QLatin1String("QPushButton{\n"
+"border-width:0px;\n"
+"border-style : solid;\n"
+"background-color:transparent;\n"
+"color: rgb(220,220,220);\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color: #87CEEB;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"color : #7CFC00;\n"
+"}\n"
+""));
+
+        horizontalLayout_19->addWidget(pushButton_19);
+
+        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_19->addItem(horizontalSpacer_15);
+
+        pushButton_20 = new QPushButton(page_2);
+        pushButton_20->setObjectName(QStringLiteral("pushButton_20"));
+        pushButton_20->setFont(font9);
+        pushButton_20->setStyleSheet(QLatin1String("QPushButton{\n"
+"border-width:0px;\n"
+"border-style : solid;\n"
+"background-color:transparent;\n"
+"color: rgb(220,220,220);\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"color: #87CEEB;\n"
+"\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"color : #7CFC00;\n"
+"}\n"
+""));
+
+        horizontalLayout_19->addWidget(pushButton_20);
+
+        horizontalSpacer_16 = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayout_19->addItem(horizontalSpacer_16);
+
+
+        horizontalLayout_21->addLayout(horizontalLayout_19);
+
+        horizontalLayout_20 = new QHBoxLayout();
+        horizontalLayout_20->setSpacing(6);
+        horizontalLayout_20->setObjectName(QStringLiteral("horizontalLayout_20"));
+        pushButton_4 = new QPushButton(page_2);
+        pushButton_4->setObjectName(QStringLiteral("pushButton_4"));
+        sizePolicy.setHeightForWidth(pushButton_4->sizePolicy().hasHeightForWidth());
+        pushButton_4->setSizePolicy(sizePolicy);
+        pushButton_4->setFont(font);
+        pushButton_4->setStyleSheet(QLatin1String("QPushButton{\n"
+"border-radius : 5px;\n"
+"border-style : solid;\n"
+"background-color:white;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#90ee90;\n"
+"color:white;\n"
+"}\n"
+""));
+
+        horizontalLayout_20->addWidget(pushButton_4);
+
+        finishPushButton = new QPushButton(page_2);
+        finishPushButton->setObjectName(QStringLiteral("finishPushButton"));
+        sizePolicy.setHeightForWidth(finishPushButton->sizePolicy().hasHeightForWidth());
+        finishPushButton->setSizePolicy(sizePolicy);
+        finishPushButton->setFont(font);
+        finishPushButton->setStyleSheet(QLatin1String("QPushButton{\n"
+"border-radius : 5px;\n"
+"border-style : solid;\n"
+"background-color:white;\n"
+"}\n"
+"\n"
+"QPushButton:hover{\n"
+"background-color:#90ee90;\n"
+"color:white;\n"
+"}\n"
+""));
+
+        horizontalLayout_20->addWidget(finishPushButton);
+
+
+        horizontalLayout_21->addLayout(horizontalLayout_20);
+
+
+        verticalLayout_20->addLayout(horizontalLayout_21);
+
+
+        horizontalLayout_24->addLayout(verticalLayout_20);
+
+        stackedWidget->addWidget(page_2);
+
+        verticalLayout_22->addWidget(stackedWidget);
 
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1569, 26));
+        menuBar->setGeometry(QRect(0, 0, 1605, 26));
         MainWindow->setMenuBar(menuBar);
         mainToolBar = new QToolBar(MainWindow);
         mainToolBar->setObjectName(QStringLiteral("mainToolBar"));
@@ -1426,6 +1684,9 @@ public:
         MainWindow->setStatusBar(statusBar);
 
         retranslateUi(MainWindow);
+
+        stackedWidget->setCurrentIndex(1);
+
 
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
@@ -1494,9 +1755,17 @@ public:
         label_31->setText(QApplication::translate("MainWindow", "Search", Q_NULLPTR));
         pushButton_15->setText(QApplication::translate("MainWindow", "K", Q_NULLPTR));
         label_32->setText(QApplication::translate("MainWindow", "QS&D", Q_NULLPTR));
-        pushButton_16->setText(QApplication::translate("MainWindow", "n", Q_NULLPTR));
+        qsdPushButton->setText(QApplication::translate("MainWindow", "n", Q_NULLPTR));
         settingPushButton->setText(QApplication::translate("MainWindow", "j", Q_NULLPTR));
         pushButton_18->setText(QApplication::translate("MainWindow", "X", Q_NULLPTR));
+        lineEdit_20->setText(QApplication::translate("MainWindow", "1", Q_NULLPTR));
+        lineEdit_21->setText(QApplication::translate("MainWindow", "1", Q_NULLPTR));
+        pushButton_13->setText(QApplication::translate("MainWindow", "y", Q_NULLPTR));
+        pushButton_17->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
+        pushButton_19->setText(QApplication::translate("MainWindow", "y", Q_NULLPTR));
+        pushButton_20->setText(QApplication::translate("MainWindow", "Y", Q_NULLPTR));
+        pushButton_4->setText(QApplication::translate("MainWindow", "Start", Q_NULLPTR));
+        finishPushButton->setText(QApplication::translate("MainWindow", "Finish", Q_NULLPTR));
     } // retranslateUi
 
 };
